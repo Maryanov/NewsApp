@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:id="@+id/main_content"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@color/colorBackground">
+
+
+        <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+
+            <ProgressBar
+                    android:id="@+id/status_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:progressDrawable="@drawable/circle_progressbar_view"
+            />
+            <WebView
+                    android:id="@+id/webNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+            />
+            <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/webNews"
+                    android:textSize="16sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:background="@color/divider"
+                    android:orientation="vertical" >
+            </LinearLayout>
+            <TextView
+                    android:id="@+id/textErrorChoiceNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/loaded_error"
+
+                    android:textSize="18sp"
+                    android:textColor="@android:color/primary_text_dark"
+            />
+            <Button
+                    android:id="@+id/buttonRefreshChoiceNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/refresh"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/textErrorChoiceNews"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:focusable="true"/>
+        </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
